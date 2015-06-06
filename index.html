@@ -24,8 +24,8 @@
       fill: #a8a8a8;
     }
   </style>
+  <script src="./app.js"></script>
 </head>
-
 <body>
   <svg width="1023px" height="377px" viewBox="0 0 1023 377" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
     <!-- Generator: Sketch 3.3.2 (12043) - http://www.bohemiancoding.com/sketch -->
@@ -147,35 +147,6 @@
         </g>
     </g>
   </svg>
-  <script>
-    $(function() {
-
-      var selectedKey;
-
-      for(var i=0; i <= 80; i++) {
-        $('#key'+i).hover(function() {
-          // In
-          $(this).addClass('highlight');
-        }, function() {
-          // Out
-          $(this).removeClass('highlight');
-        });
-        $('#key'+i).click(function() {
-          var key = $(this).attr('id');
-          var $this = $(this);
-
-          if (selectedKey) {
-            $('#'+selectedKey).removeClass('selected');
-          }
-          if (selectedKey != key) {
-            $this.addClass('selected');
-            selectedKey = key;
-          } else {
-            selected = null;
-          }
-        });
-      }
-    });
-  </script>
+  <button id="save">Save</button>
 </body>
 </html>
