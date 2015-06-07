@@ -5,11 +5,11 @@ var edc = {};
   var layout = [];
 
   var selectKey = function() {
-    var key = +$(this).attr('id').substr(3);
+    var key = $(this).data('key');
     var $this = $(this);
 
     if (selectedKey) {
-      $('#key'+selectedKey).removeClass('selected');
+      $('.key.key-'+selectedKey).removeClass('selected');
     }
     if (selectedKey != key) {
       $this.addClass('selected');
@@ -22,17 +22,28 @@ var edc = {};
   };
 
   ctx.start = function() {
+
+    // Setup handlers of all the keys
     for(var i=0; i <= 80; i++) {
       layout[i] = 0;
-      $('#key'+i).hover(function() {
+      $('.key.key-'+i).hover(function() {
         // In
         $(this).addClass('highlight');
       }, function() {
         // Out
         $(this).removeClass('highlight');
       });
-      $('#key'+i).click(selectKey);
+      $('.key.key-'+i).click(selectKey);
     }
+
+    $('body').keyup(function() {
+      console.log("keyup");
+      if(selectedKey) {
+        var $key = $('.key.key-'+selectedKey);
+        $key.append('<text class="text7" x="360.22806" y="52.69207" transform=""><tspan x="360.22806" dy="-7">A</tspan><tspan x="360.22806" dy="14">a</tspan></text>');
+      }
+    });
+
   };
 
   ctx.save = function() {

@@ -1,0 +1,19 @@
+tspan {
+	text-anchor: middle;
+	font-family: Helvetica;
+	font-size: 18px;
+	font-weight: bold;
+	fill: #000000;
+}
+
+rect.key {
+  fill: #D8D8D8;
+}
+
+rect.highlight {
+  fill: #e8e8e8;
+}
+
+rect.selected {
+  fill: #a8a8a8;
+}
