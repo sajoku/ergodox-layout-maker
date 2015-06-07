@@ -1,3 +1,7 @@
+svg.layer-template {
+	display: none;
+}
+
 text.label {
 	text-anchor: middle;
 }
