@@ -51,7 +51,7 @@ var edc = {};
                                   .attr('x', +$key.attr('x') + $key.attr('width')/2)
                                   .attr('y', +$key.attr('y'));
 
-          $text.append('tspan').attr('dx', 0).attr('dy', 25).text("test");
+          $text.append('tspan').attr('dx', 0).attr('dy', 25).text(d3.event.keyCode);
         } else {
           $text.select('text tspan').text(d3.event.keyCode);
         }
