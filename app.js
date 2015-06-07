@@ -14,8 +14,6 @@ var edc = {};
     if (selectedKey != key) {
       d3.select(this).classed({selected: true});
       selectedKey = key;
-
-      layout[key] = 1;
     } else {
       selected = null;
     }
@@ -39,7 +37,6 @@ var edc = {};
     }
 
     d3.select('body').on('keyup', function(e) {
-      console.log("keyup");
       if(selectedKey) {
         var $key = d3.select('.key.key-'+selectedKey);
         var $text = d3.select('.label.label-'+selectedKey);
@@ -55,6 +52,7 @@ var edc = {};
         } else {
           $text.select('text tspan').text(d3.event.keyCode);
         }
+        layout[selectedKey] = d3.event.keyCode;
       }
     });
 
