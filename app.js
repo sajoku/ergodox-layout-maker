@@ -11,10 +11,7 @@ var edc = {};
   var selectKey = function() {
     var key = $(this).data('key');
     var $this = $(this);
-    var layer = $(d3.select(this).node().parentNode.parentNode).data('layer');
-
-    console.log("selectKey", key, layer);
-    console.log("selectKey & selectedLayer", selectedKey, selectedLayer);
+    var layer = $(d3.select(this).node()).closest('svg').data('layer');
 
     if (selectedLayer != null && selectedKey != null) {
       d3.select('.layer.layer-'+selectedLayer+' .key.key-'+selectedKey).classed({selected: false});
