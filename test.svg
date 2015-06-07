@@ -1,26 +1,4 @@
-<!doctype html>
-
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-
-  <title>ErgoDox Layout Configurator</title>
-  <meta name="description" content="ErgoDox Layout Configurator">
-  <meta name="author" content="">
-
-  <!--link rel="stylesheet" href="css/styles.css?v=1.0"-->
-
-  <!--[if lt IE 9]>
-  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-  <![endif]-->
-  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-  <script src="./jquery.svg.min.js"></script>
-  <script src="./jquery.svgdom.min.js"></script>
-  <script src="./d3.min.js"></script>
-  <link href="app.css" rel="stylesheet" type="text/css">
-</head>
-<body>
-  <svg width="1000px" height="375px" viewBox="0 0 1000 375" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+<svg width="1000px" height="375px" viewBox="0 0 1000 375" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
     <g transform="translate(500.000000, 0.000000)">
         <rect class="key key-72" data-key="72" x="425" y="220" width="50" height="50"></rect>
         <rect class="key key-67" data-key="67" x="425" y="168" width="75" height="50"></rect>
@@ -94,9 +72,9 @@
         <rect class="key key-28" data-key="28" x="25" y="220" width="50" height="50"></rect>
         <rect class="key key-21" data-key="21" x="0" y="168" width="75" height="50"></rect>
         <rect class="key key-15" data-key="15" x="0" y="116" width="75" height="50"></rect>
-        <rect class="key key-8" data-key="8" x="0" y="64" width="75" height="50"></rect>
+        <rect class="key key-8 selected" data-key="8" x="0" y="64" width="75" height="50"></rect>
         <rect class="key key-1" data-key="1" x="0" y="12" width="75" height="50"></rect>
-        <g transform="translate(397.733614, 271.211309) rotate(25.000000) translate(-397.733614, -271.211309) translate(320.233614, 193.711309)">
+        <g transform="translate(397.733614, 271.211309) rotate(25.000000) translate(-397.733614, -271.211309) translate(320.233614, 193.711309)" fill="#D8D8D8">
             <rect class="key key-39" data-key="39" x="52" y="53" width="50" height="100"></rect>
             <rect class="key key-38" data-key="38" x="5.68434189e-14" y="53" width="50" height="100"></rect>
             <rect class="key key-40" data-key="40" x="104" y="104" width="50" height="50"></rect>
@@ -105,8 +83,7 @@
             <rect class="key key-33" data-key="33" x="52" y="2.84217094e-14" width="50" height="50"></rect>
         </g>
     </g>
-  </svg>
-  <button id="save">Save</button>
-  <script src="./app.js"></script>
-</body>
-</html>
+    <text class="label label-18" x="206" text-anchor="middle">
+        <tspan dx="0" dy="25" fill="#ff0000">13</tspan>
+    </text>
+</svg>

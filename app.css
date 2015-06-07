@@ -1,9 +1,12 @@
-tspan {
+text.label {
 	text-anchor: middle;
+}
+
+.label tspan {
 	font-family: Helvetica;
 	font-size: 18px;
 	font-weight: bold;
-	fill: #000000;
+	fill: #FF0000;
 }
 
 rect.key {
