@@ -1,4 +1,4 @@
-![ergodox](ergodox.svg)
+![ergodox](./ergodox.svg)
 
 # ErgoDox Layout Configurator
 Attempt to make an open source ErgoDox Layout Configurator, hopefully this won't be needed at all and Massdrop will just open source theirs.
