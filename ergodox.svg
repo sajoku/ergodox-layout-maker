@@ -75,10 +75,6 @@
         <rect class="key key-15" data-key="15" fill="#D8D8D8" x="0" y="116" width="75" height="50"></rect>
         <rect class="key key-8" data-key="8" fill="#D8D8D8" x="0" y="64" width="75" height="50"></rect>
         <rect class="key key-1" data-key="1" fill="#D8D8D8" x="0" y="12" width="75" height="50"></rect>
-        <text class="label label-1" x="0" y="12" font-family="Helvetica" font-size="21" font-weight="bold" fill="#000000">
-            <tspan x="30.4172363" dy="25">A</tspan>
-            <tspan x="30.4172363" dy="14">a</tspan>
-        </text>
         <g transform="translate(397.733614, 271.211309) rotate(25.000000) translate(-397.733614, -271.211309) translate(320.233614, 193.711309)" fill="#D8D8D8">
             <rect class="key key-39" data-key="39" x="52" y="53" width="50" height="100"></rect>
             <rect class="key key-38" data-key="38" x="5.68434189e-14" y="53" width="50" height="100"></rect>
