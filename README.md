@@ -29,7 +29,7 @@ Prerequisites (see https://github.com/osx-cross/homebrew-avr/):
 
 After this it is a simple `make` inside the `src` folder of the [firmware](https://github.com/benblazak/ergodox-firmware).
 
-To compile a different layout: make LAYOUT=layout
+To compile a different layout: `make LAYOUT=layout`, so say `make LAYOUT=dvorak-kinesis-mod`
 
 ## TODO
 
