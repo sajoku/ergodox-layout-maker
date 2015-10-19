@@ -1,3 +1,6 @@
+/**
+ * EZLayoutMaker
+ */
 class EZLayoutMaker {
   constructor() {
     this.selectedKey = null;
@@ -7,6 +10,10 @@ class EZLayoutMaker {
     this.nrOfLayers = 0;
   }
 
+  /**
+   * addLayer
+   * adds a layer to the layout
+   */
   addLayer() {
     var l = this.nrOfLayers;
     var $template = $('.layer-template').clone(false);
@@ -27,33 +34,24 @@ class EZLayoutMaker {
     this.nrOfLayers++;
   }
 
+  /**
+   * starts the maker, adds the initial layer
+   */
   start() {
     this.addLayer();
 
-    d3.select('body').on('keyup', function(e) {
-      if(this.selectedKey != null && this.selectedLayer != null) {
-        var $key = d3.select('.layer.layer-'+this.selectedLayer+' .key.key-'+this.selectedKey);
-        var $text = d3.select('.layer.layer-'+this.selectedLayer+' .label.label-'+this.selectedKey);
-        var $wrapper = $key.node().parentNode;
-
-        if ($text.empty()) {
-          $text = d3.select($wrapper).append('text')
-            .attr('class', 'label label-'+this.selectedKey)
-            .attr('x', +$key.attr('x') + $key.attr('width')/2)
-            .attr('y', +$key.attr('y'));
-
-          $text.append('tspan').attr('dx', 0).attr('dy', 30).text(d3.event.keyCode);
-        } else {
-          $text.select('text tspan').text(d3.event.keyCode);
-        }
-        this.layout[this.selectedLayer][this.selectedKey] = d3.event.keyCode;
-      }
-    }.bind(this));
-
+    d3.select('body').on('keyup', this.pressedKey.bind(this));
     d3.select('#save').on('click', this.save.bind(this));
     d3.select('#add-layer').on('click', this.addLayer.bind(this));
   }
 
+  /*
+   * EVENT HANDLERS
+   */
+
+  /**
+   * the user selects a key (using mouse)
+   */
   selectKey() {
     var $this = $(d3.event.target);
     var key = $this.data('key');
@@ -72,6 +70,32 @@ class EZLayoutMaker {
     }
   }
 
+  /**
+   *
+   */
+  pressedKey() {
+    if(this.selectedKey != null && this.selectedLayer != null) {
+      var $key = d3.select('.layer.layer-'+this.selectedLayer+' .key.key-'+this.selectedKey);
+      var $text = d3.select('.layer.layer-'+this.selectedLayer+' .label.label-'+this.selectedKey);
+      var $wrapper = $key.node().parentNode;
+
+      if ($text.empty()) {
+        $text = d3.select($wrapper).append('text')
+          .attr('class', 'label label-'+this.selectedKey)
+          .attr('x', +$key.attr('x') + $key.attr('width')/2)
+          .attr('y', +$key.attr('y'));
+
+        $text.append('tspan').attr('dx', 0).attr('dy', 30).text(d3.event.keyCode);
+      } else {
+        $text.select('text tspan').text(d3.event.keyCode);
+      }
+      this.layout[this.selectedLayer][this.selectedKey] = d3.event.keyCode;
+    }
+  }
+
+  /**
+   * the user wants to save the layout
+   */
   save() {
     console.log(this.layout);
   }
