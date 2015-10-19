@@ -1,0 +1,28 @@
+{
+  "keyboard_layout": {
+    "description": "dvorak",
+    "layers": [
+      {
+        "description": "customized dvorak with symbol row switched",
+        "keymap": [
+          "ESC", "FN12", "FN12", "FN12", "FN12", "FN12", "BSLS",
+          "TAB", "QUOT", "COMM", "DOT", "P", "Y", "FN2",
+          "LSFT", "A", "O", "E", "U", "I",
+          "LCTL", "SCLN", "Q", "J", "K", "X", "DEL",
+          "FN3", "FN1", "LCTL", "LALT", "LGUI",
+          "FN5", "HOME",
+          "END",
+          "BSPC", "LSFT", "LGUI",
+          "MINS", "FN12", "FN12", "FN12", "FN12", "FN12", "MPLY",
+          "FN3", "F", "G", "C", "R", "L", "MNXT",
+          "D", "H", "T", "N", "S", "RSFT",
+          "DEL", "B", "M", "W", "V", "Z", "RCTL",
+          "MPRV", "MNXT", "APP", "FN8", "FN2",
+          "PGUP", "MPLY",
+          "PGDN",
+          "ENT", "FN1", "SPC"
+        ]
+      }
+    ]
+  }
+}
