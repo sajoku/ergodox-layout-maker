@@ -7,6 +7,14 @@ Web based open source ErgoDox Layout Maker.
 
 - d3 for SVG stuff
 - jQuery for everything else.
+- nodejs / npm
+
+## Howto 
+
+- npm install -g gulp
+- npm intall
+- gulp (this should create a dist folder)
+- open index.html
 
 ## What is working?
 
