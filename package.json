@@ -15,7 +15,7 @@
     "type": "git",
     "url": "git+https://github.com/tdegrunt/ergodox-layout-maker.git"
   },
-  "author": "",
+  "author": "Tom de Grunt <tom@degrunt.nl>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/tdegrunt/ergodox-layout-maker/issues"
