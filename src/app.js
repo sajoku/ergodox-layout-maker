@@ -78,6 +78,7 @@ class EZLayoutMaker {
       var $key = d3.select('.layer.layer-'+this.selectedLayer+' .key.key-'+this.selectedKey);
       var $text = d3.select('.layer.layer-'+this.selectedLayer+' .label.label-'+this.selectedKey);
       var $wrapper = $key.node().parentNode;
+      console.log(d3.event);
 
       if ($text.empty()) {
         $text = d3.select($wrapper).append('text')
@@ -85,9 +86,9 @@ class EZLayoutMaker {
           .attr('x', +$key.attr('x') + $key.attr('width')/2)
           .attr('y', +$key.attr('y'));
 
-        $text.append('tspan').attr('dx', 0).attr('dy', 30).text(d3.event.keyCode);
+        $text.append('tspan').attr('dx', 0).attr('dy', 30).text(String.fromCharCode(d3.event.keyCode));
       } else {
-        $text.select('text tspan').text(d3.event.keyCode);
+        $text.select('text tspan').text(String.fromCharCode(d3.event.keyCode));
       }
       this.layout[this.selectedLayer][this.selectedKey] = d3.event.keyCode;
     }
