@@ -40,9 +40,19 @@ class EZLayoutMaker {
   start() {
     this.addLayer();
 
-    d3.select('body').on('keyup', this.pressedKey.bind(this));
+    d3.select('body').on('keydown', this.pressedKey.bind(this));
     d3.select('#save').on('click', this.save.bind(this));
     d3.select('#add-layer').on('click', this.addLayer.bind(this));
+  }
+
+  /**
+   * Set key in layout
+   * @param layer {Number} layer of the key
+   * @param key {Number} key position of the key (within the layer)
+   * @param keyCode {Number} keycode
+   */
+  setKey(layer, key, keyCode) {
+    this.layout[this.selectedLayer][this.selectedKey] = keyCode;
   }
 
   /*
@@ -90,7 +100,7 @@ class EZLayoutMaker {
       } else {
         $text.select('text tspan').text(String.fromCharCode(d3.event.keyCode));
       }
-      this.layout[this.selectedLayer][this.selectedKey] = d3.event.keyCode;
+      this.setKey(this.selectedLayer, this.selectedKey, d3.event.keyCode)
     }
   }
 
