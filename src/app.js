@@ -4,27 +4,31 @@ class EZLayoutMaker {
     this.selectedLayer = null;
     this.layout = [];
     this.layout[0] = [];
+    this.nrOfLayers = 0;
+  }
+
+  addLayer() {
+    var l = this.nrOfLayers;
+    var $template = $('.layer-template').clone(false);
+    $template.attr('class', 'layer layer-'+l);
+    $template.attr('data-layer', l);
+    $('body').append($template);
+
+    // Setup handlers of all the keys
+    for(var i=0; i <= 80; i++) {
+      d3.select('.layer.layer-'+l+' .key.key-'+i).on("mouseover", function() {
+        d3.select(this).classed({highlight: true});
+      });
+      d3.select('.layer.layer-'+l+' .key.key-'+i).on('mouseout', function() {
+        d3.select(this).classed({highlight: false});
+      });
+      d3.select('.layer.layer-'+l+' .key.key-'+i).on('click', this.selectKey.bind(this));
+    }
+    this.nrOfLayers++;
   }
 
   start() {
-    // TODO: Extract in addLayer function
-    for(var l=0; l < 1; l++) {
-      var $template = $('.layer-template').clone(false);
-      $template.attr('class', 'layer layer-'+l);
-      $template.attr('data-layer', l);
-      $('body').append($template);
-
-      // Setup handlers of all the keys
-      for(var i=0; i <= 80; i++) {
-        d3.select('.layer.layer-'+l+' .key.key-'+i).on("mouseover", function() {
-          d3.select(this).classed({highlight: true});
-        });
-        d3.select('.layer.layer-'+l+' .key.key-'+i).on('mouseout', function() {
-          d3.select(this).classed({highlight: false});
-        });
-        d3.select('.layer.layer-'+l+' .key.key-'+i).on('click', this.selectKey.bind(this));
-      }
-    }
+    this.addLayer();
 
     d3.select('body').on('keyup', function(e) {
       if(this.selectedKey != null && this.selectedLayer != null) {
@@ -47,6 +51,7 @@ class EZLayoutMaker {
     }.bind(this));
 
     d3.select('#save').on('click', this.save.bind(this));
+    d3.select('#add-layer').on('click', this.addLayer.bind(this));
   }
 
   selectKey() {
