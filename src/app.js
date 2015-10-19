@@ -71,7 +71,7 @@ class EZLayoutMaker {
   }
 
   /**
-   *
+   * user pressed a key
    */
   pressedKey() {
     if(this.selectedKey != null && this.selectedLayer != null) {

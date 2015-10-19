@@ -15,8 +15,9 @@ Web based open source ErgoDox Layout Maker.
 
     npm install -g gulp
     npm install
-    gulp (this should create a dist folder)
+    gulp
     open index.html
+    gulp watch
 
 ## References
 
