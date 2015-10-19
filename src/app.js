@@ -5,8 +5,6 @@ var edc = {};
   var selectedLayer = null;
   var layout = [];
   layout[0] = [];
-  layout[1] = [];
-  layout[2] = [];
 
   var selectKey = function() {
     var key = $(this).data('key');
@@ -29,7 +27,7 @@ var edc = {};
   ctx.start = function() {
 
     // TODO: Extract in addLayer function
-    for(var l=0; l <= 2; l++) {
+    for(var l=0; l < 1; l++) {
       var $template = $('.layer-template').clone(false);
       $template.attr('class', 'layer layer-'+l);
       $template.attr('data-layer', l);

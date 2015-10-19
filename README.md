@@ -1,7 +1,7 @@
 ![ergodox](ergodox.png)
 
-# ErgoDox Layout Configurator
-Attempt to make an open source ErgoDox Layout Configurator, hopefully this won't be needed at all and Massdrop will just open source theirs. Mind you this is being developed 'blind' (i.e. by not looking at Massdrop's code).
+# ErgoDox Layout Maker
+Web based open source ErgoDox Layout Maker.
 
 ## Dependencies
 
