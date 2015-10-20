@@ -1,7 +1,9 @@
+import {keyCodes} from 'keycodes';
+
 /**
- * EZLayoutMaker
+ * LayoutMaker
  */
-class EZLayoutMaker {
+export class LayoutMaker {
   constructor() {
     this.selectedKey = null;
     this.selectedLayer = null;
@@ -111,6 +113,3 @@ class EZLayoutMaker {
     console.log(this.layout);
   }
 }
-
-var ezlm = new EZLayoutMaker();
-ezlm.start();

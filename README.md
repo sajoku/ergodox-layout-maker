@@ -9,15 +9,12 @@ Web based open source ErgoDox Layout Maker.
 - jQuery for everything else.
 - nodejs / npm
 
-## Howto 
+## Quick Start
 
-### Get this running
-
-    npm install -g gulp
+    npm install gulp -g
     npm install
-    gulp
-    open index.html
-    gulp watch
+    npm start
+
 
 ## References
 

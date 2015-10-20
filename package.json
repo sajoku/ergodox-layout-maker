@@ -2,14 +2,18 @@
   "name": "ergodox-layout-maker",
   "version": "1.0.0",
   "description": "Ergodox Layout Maker",
-  "main": "app.js",
   "dependencies": {
-    "gulp": "^3.9.0",
-    "gulp-babel": "^5.3.0"
+    "systemjs": "^0.18.4"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-babel": "^5.3.0",
+    "browser-sync": "^2.8.2",
+    "superstatic": "^1.2.3"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "gulp serve"
   },
   "repository": {
     "type": "git",
