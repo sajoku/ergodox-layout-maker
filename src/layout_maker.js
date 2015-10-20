@@ -98,12 +98,14 @@ export class LayoutMaker {
           .attr('x', +$key.attr('x') + $key.attr('width')/2)
           .attr('y', +$key.attr('y'));
 
-        $text.append('tspan').attr('dx', 0).attr('dy', 30).text(String.fromCharCode(d3.event.keyCode));
+        $text.append('tspan').attr('dx', 0).attr('dy', 30).html(keyCodes[d3.event.keyCode][0]);
       } else {
-        $text.select('text tspan').text(String.fromCharCode(d3.event.keyCode));
+        $text.select('text tspan').html(keyCodes[d3.event.keyCode][0]);
       }
-      this.setKey(this.selectedLayer, this.selectedKey, d3.event.keyCode)
+      this.setKey(this.selectedLayer, this.selectedKey, keyCodes[d3.event.keyCode][1]);
     }
+    d3.event.preventDefault();
+    return false;
   }
 
   /**
