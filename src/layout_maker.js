@@ -54,7 +54,7 @@ export class LayoutMaker {
    * @param keyCode {Number} keycode
    */
   setKey(layer, key, keyCode) {
-    this.layout[this.selectedLayer][this.selectedKey] = keyCode;
+    this.layout[this.selectedLayer][this.selectedKey-1] = keyCode;
   }
 
   /*
