@@ -128,6 +128,6 @@ export class LayoutMaker {
       jsn['keyboard_layout']['layers'].push({"description": "", "keymap": keymap});
 
     }
-    console.log(JSON.stringify(jsn));
+    console.log(JSON.stringify(jsn, null, "  "));
   }
 }
