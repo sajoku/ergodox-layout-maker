@@ -22,6 +22,7 @@ Web based open source ErgoDox Layout Maker.
 - [ErgoDox Keyboard Firmware](https://github.com/benblazak/ergodox-firmware)
 - [TMK](https://github.com/tenderlove/tmk_keyboard/tree/master/keyboard/ergodox)
 - [Unicode: Keyboard Symbols](http://xahlee.info/comp/unicode_computing_symbols.html)
+- [JS keycodes](http://www.cambiaresearch.com/articles/15/javascript-char-codes-key-codes)
 
 ### Compiling firmware (on OSX)
 

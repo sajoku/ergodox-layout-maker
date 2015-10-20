@@ -8,7 +8,6 @@ export class LayoutMaker {
     this.selectedKey = null;
     this.selectedLayer = null;
     this.layout = [];
-    this.layout[0] = [];
     this.nrOfLayers = 0;
   }
 
@@ -18,6 +17,7 @@ export class LayoutMaker {
    */
   addLayer() {
     var l = this.nrOfLayers;
+    this.layout[l] = [];
     var $template = $('.layer-template').clone(false);
     $template.attr('class', 'layer layer-'+l);
     $template.attr('data-layer', l);
@@ -112,6 +112,22 @@ export class LayoutMaker {
    * the user wants to save the layout
    */
   save() {
-    console.log(this.layout);
+    // Each layout has 64 keys
+    var jsn = {
+      "keyboard_layout": {
+        "description": "dvorak",
+        "layers": []
+      }
+    };
+
+    for(var i=0; i<this.layout.length; i++) {
+      var keymap = Array.apply(null, Array(64)).map(function (x, i) { return "KC_TRANSPARENT"; });
+      for(var k=0; k< this.layout[i].length; k++) {
+        keymap[k] = this.layout[i][k] || "KC_TRANSPARENT";
+      }
+      jsn['keyboard_layout']['layers'].push({"description": "", "keymap": keymap});
+
+    }
+    console.log(JSON.stringify(jsn));
   }
 }
