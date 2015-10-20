@@ -21,6 +21,7 @@ Web based open source ErgoDox Layout Maker.
 - [How to create a keymap](https://github.com/benblazak/ergodox-firmware#create-a-new-keymap)
 - [ErgoDox Keyboard Firmware](https://github.com/benblazak/ergodox-firmware)
 - [TMK](https://github.com/tenderlove/tmk_keyboard/tree/master/keyboard/ergodox)
+- [Unicode: Keyboard Symbols](http://xahlee.info/comp/unicode_computing_symbols.html)
 
 ### Compiling firmware (on OSX)
 
@@ -37,3 +38,4 @@ To compile a different layout: `make LAYOUT=layout`, so say `make LAYOUT=dvorak-
 
 - Make standalone using http://electron.atom.io/
 - Integrate directly with Teensy loader (http://www.pjrc.com/teensy/loader_cli.html)
+- Check whether we're on Mac, Linux or Windows to detect which the best representation of the key is.
