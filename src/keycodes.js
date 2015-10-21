@@ -48,7 +48,7 @@ export const keyCodes = {
   27: ["&#x238b;", "KC_ESCAPE"],
   8: ["&#x232b;", "KC_BSPACE"],
   9: ["&#x21e5;", "KC_TAB"],
-  32: ["", "KC_SPACE"],
+  32: ["SPC", "KC_SPACE"],
   189: ["-", "KC_MINUS"],
   187: ["=", "KC_EQUAL"],
   219: ["[", "KC_LBRACKET"],
@@ -63,7 +63,7 @@ export const keyCodes = {
   191: ["/", "KC_SLASH"],       /* / and ? */
   0: ["", "KC_CAPSLOCK"],
   112: ["F1", "KC_F1", "f1"],
-  113: ["F3", "KC_F2", "f1"],
+  113: ["F2", "KC_F2", "f1"],
   114: ["F3", "KC_F3", "f1"],
   115: ["F4", "KC_F4", "f1"],
   116: ["F5", "KC_F5", "f1"],
