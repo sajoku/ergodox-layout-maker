@@ -117,7 +117,7 @@ export class LayoutMaker {
    * the user wants to save the layout
    */
   save() {
-    // Each layout has 64 keys
+    // Each layout has 84 keys (14 rows 6 columns)
     var jsn = {
       "keyboard_layout": {
         "description": "dvorak",
@@ -126,7 +126,7 @@ export class LayoutMaker {
     };
 
     for(var i=0; i<this.layout.length; i++) {
-      var keymap = Array.apply(null, Array(64)).map(function (x, i) { return "KC_TRANSPARENT"; });
+      var keymap = Array.apply(null, Array(84)).map(function (x, i) { return "KC_TRANSPARENT"; });
       for(var k=0; k< this.layout[i].length; k++) {
         keymap[k] = this.layout[i][k] || "KC_TRANSPARENT";
       }
