@@ -43,6 +43,7 @@ export class LayoutMaker {
     this.addLayer();
 
     d3.select('body').on('keydown', this.pressedKey.bind(this));
+    d3.select('body').on('keyup', this.pressedKey.bind(this));
     d3.select('#save').on('click', this.save.bind(this));
     d3.select('#add-layer').on('click', this.addLayer.bind(this));
   }
@@ -90,7 +91,11 @@ export class LayoutMaker {
       var $key = d3.select('.layer.layer-'+this.selectedLayer+' .key.key-'+this.selectedKey);
       var $text = d3.select('.layer.layer-'+this.selectedLayer+' .label.label-'+this.selectedKey);
       var $wrapper = $key.node().parentNode;
-      console.log(d3.event);
+      if (!keyCodes[d3.event.keyCode]) {
+        console.log("Key not recognised, please report.");
+        console.log(d3.event);
+        return;
+      }
 
       if ($text.empty()) {
         $text = d3.select($wrapper).append('text')
